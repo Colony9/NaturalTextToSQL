@@ -1,15 +1,20 @@
+import os
 from sqlalchemy import create_engine, Column, Integer, String, Boolean, Float, ForeignKey
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship, sessionmaker
+from flask_login import UserMixin
+
+database_engine = create_engine(os.getenv("DATABASE_URL"))
+Session = sessionmaker(bind=database_engine)
 
 class Base(DeclarativeBase):
     pass
 
-class User(Base):
+class User(Base, UserMixin):
     __tablename__ = "users"
 
     id: Mapped[int] = mapped_column(primary_key=True)
     username: Mapped[str] = mapped_column(String(20), unique=True, nullable=False)
-    password: Mapped[str] = mapped_column(String(50), unique=True, nullable=False)
+    password: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
     
 class IMDBInfo(Base):
     __tablename__ = "IMDBInfo"

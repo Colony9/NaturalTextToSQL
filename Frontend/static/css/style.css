@@ -1,0 +1,53 @@
+/* Global page styling */
+body {
+    background-color: #f1f1f1;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Centered login container */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main white card */
+.content-box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Login card sizing */
+.login-box {
+    width: 400px;
+}
+
+/* Main page card sizing */
+.main-box {
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Top search/input bar */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/* Table styling */
+.table-container {
+    overflow-x: auto;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+}

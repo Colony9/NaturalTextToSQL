@@ -2,7 +2,7 @@
 body {
     background-color: #f1f1f1;
     min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
 }
 
 /* Centered login container */
@@ -21,18 +21,16 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Login card sizing */
 .login-box {
     width: 400px;
 }
 
-/* Main page card sizing */
 .main-box {
     width: 90%;
     max-width: 1200px;
 }
 
-/* Top search/input bar */
+/* Top input bar - for inputs to the LLM */
 .input-area {
     display: flex;
     gap: 10px;

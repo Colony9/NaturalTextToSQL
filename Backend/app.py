@@ -41,7 +41,6 @@ def login():
         try:
             username = request.form["username"]
             password = request.form["password"]
-            print("username: " + username + "\nPassword: " + password)
         except:
             #TODO: Add proper error handling here
             print("Missing Data")
